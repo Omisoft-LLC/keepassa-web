@@ -1,0 +1,37 @@
+{
+  "mode": "DEV",
+  "init_done": true,
+  "serverUrl": null,
+  "mp": [
+    "\u0000"
+  ],
+  "skmp": [
+    "a",
+    "b",
+    "c"
+  ],
+  "skup": [
+    "b",
+    "b",
+    "c"
+  ],
+  "skcp": [
+    "b",
+    "c",
+    "a"
+  ],
+  "truststore_password": [
+    "a",
+    "s",
+    "d",
+    "q",
+    "w",
+    "e",
+    "1",
+    "2",
+    "3",
+    "!",
+    "@",
+    "#"
+  ]
+}

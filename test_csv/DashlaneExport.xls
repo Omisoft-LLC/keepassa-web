@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="windows-1258"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+<Styles>
+<Style ss:ID="Default" ss:Name="Normal">
+<Alignment ss:Vertical="Bottom"/>
+</Style>
+</Styles>
+<Worksheet ss:Name="Dashlane export">
+<Table ss:ExpandedColumnCount="15" ss:ExpandedRowCount="3" x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="60">
+   <Column ss:AutoFitWidth="1"/>
+   <Column ss:AutoFitWidth="1"/>
+   <Column ss:AutoFitWidth="1"/>
+   <Column ss:AutoFitWidth="1"/>
+   <Column ss:AutoFitWidth="1"/>
+   <Column ss:AutoFitWidth="1"/>
+   <Column ss:AutoFitWidth="1"/>
+   <Column ss:AutoFitWidth="1"/>
+   <Column ss:AutoFitWidth="1"/>
+   <Column ss:AutoFitWidth="1"/>
+   <Column ss:AutoFitWidth="1"/>
+   <Column ss:AutoFitWidth="1"/>
+   <Column ss:AutoFitWidth="1"/>
+   <Column ss:AutoFitWidth="1"/>
+   <Column ss:AutoFitWidth="1"/>
+<Row>
+<Cell><Data ss:Type="String"><![CDATA[dido@omisoft.eu]]></Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String"><![CDATA[dir.bg]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[dir.bg]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[dido@dido.com]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[dido1password]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[Note 1]]></Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String"><![CDATA[adobe.com]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[adobe.com]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[root2000]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[asdqwe]]></Data></Cell>
+<Cell><Data ss:Type="String"><![CDATA[]]></Data></Cell>
+</Row>
+</Table>
+</Worksheet>
+</Workbook>

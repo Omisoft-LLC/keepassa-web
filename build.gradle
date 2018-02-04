@@ -1,0 +1,166 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '2.0.0'
+    id 'application'
+
+}
+
+
+group = 'com.omisoft.keepassa.KeepassaRest'
+version = '1.0.0'
+
+description = 'Keepassa password management'
+
+mainClassName = "com.omisoft.keepassa.MainApp"
+
+//jar {
+//    manifest {
+//        attributes(
+//                'Main-Class': 'com.omisoft.keepassa.MainApp'
+//                'version': project.version,
+//                'lastBuild': buildTime()
+//        )
+//    }
+//
+//}
+//configurations.all {
+//    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+//}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+
+
+repositories {
+    mavenCentral()
+    jcenter()
+    flatDir {
+        dirs 'lib'
+    }
+}
+dependencies {
+    compile name: 'common-1.0'
+
+    compile group: 'com.google.zxing', name: 'core', version:'3.2.1'
+    compile group: 'com.google.zxing', name: 'javase', version:'3.2.1'
+    compile group: 'org.eclipse.jetty', name: 'jetty-server', version:'9.4.2.v20170220'
+    compile group: 'org.eclipse.jetty', name: 'jetty-servlet', version:'9.4.2.v20170220'
+    compile group: 'org.eclipse.jetty', name: 'jetty-jmx', version:'9.4.2.v20170220'
+    compile group: 'org.eclipse.jetty', name: 'jetty-util', version:'9.4.2.v20170220'
+    compile group: 'org.eclipse.jetty', name: 'jetty-servlets', version:'9.4.2.v20170220'
+    compile group: 'org.eclipse.jetty', name: 'jetty-alpn-server', version:'9.4.2.v20170220'
+    compile group: 'org.eclipse.jetty', name: 'jetty-annotations', version:'9.4.2.v20170220'
+    compile group: 'org.eclipse.jetty', name: 'jetty-plus', version:'9.4.2.v20170220'
+    compile group: 'org.apache.poi', name: 'poi', version:'3.15'
+    compile group: 'org.eclipse.jetty', name: 'apache-jsp', version:'9.4.2.v20170220'
+    compile group: 'org.mindrot', name: 'jbcrypt', version: '0.4'
+    compile group: 'org.eclipse.jetty', name: 'apache-jstl', version:'9.4.2.v20170220'
+    compile(group: 'org.jboss.resteasy', name: 'resteasy-jaxrs', version:'3.1.1.Final') {
+exclude(module: 'jboss-logging')
+    }
+    compile(group: 'org.jboss.resteasy', name: 'resteasy-jackson2-provider', version:'3.0.19.Final') {
+exclude(module: 'jboss-logging')
+    }
+    compile(group: 'org.jboss.resteasy', name: 'resteasy-multipart-provider', version:'3.0.19.Final') {
+exclude(module: 'jboss-logging')
+    }
+    compile(group: 'org.jboss.resteasy', name: 'resteasy-guice', version:'3.1.1.Final') {
+exclude(module: 'jboss-logging')
+    }
+    compile group: 'org.jvnet', name: 'mimepull', version:'1.6'
+    compile group: 'com.fasterxml.jackson.jaxrs', name: 'jackson-jaxrs-json-provider', version:'2.8.3'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version:'2.8.7'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version:'2.8.3'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version:'2.8.7'
+    compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-guava', version:'2.8.3'
+    compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version:'2.8.3'
+    compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jdk8', version:'2.8.3'
+    compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-afterburner', version:'2.8.3'
+    compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-joda', version:'2.8.3'
+    compile group: 'org.jboss.logging', name: 'jboss-logging', version:'3.3.0.Final'
+    compile group: 'org.slf4j', name: 'slf4j-api', version:'1.7.25'
+    compileOnly "org.projectlombok:lombok:1.16.16"
+    compile group: 'joda-time', name: 'joda-time', version:'2.9.3'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version:'3.5'
+    compile group: 'com.google.inject.extensions', name: 'guice-multibindings', version:'4.1.0'
+    compile group: 'com.google.inject', name: 'guice', version:'4.1.0'
+    compile group: 'org.postgresql', name: 'postgresql', version:'42.0.0'
+    compile group: 'com.google.inject.extensions', name: 'guice-servlet', version:'4.1.0'
+    compile group: 'org.hibernate', name: 'hibernate-core', version:'5.2.9.Final'
+    compile group: 'org.hibernate', name: 'hibernate-envers', version:'5.2.8.Final'
+    compile group: 'org.bouncycastle', name: 'bcpkix-jdk15on', version:'1.56'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version:'1.0.13'
+    compile group: 'com.nimbusds', name: 'nimbus-jose-jwt', version:'4.34.2'
+    compile group: 'org.freemarker', name: 'freemarker', version:'2.3.23'
+    compile group: 'org.apache.commons', name: 'commons-email', version:'1.4'
+    compile group: 'org.ow2.asm', name: 'asm', version:'5.1'
+    compile group: 'org.flywaydb', name: 'flyway-core', version:'4.0.3'
+    compile group: 'org.quartz-scheduler', name: 'quartz', version:'2.2.3'
+    compile group: 'com.zaxxer', name: 'HikariCP', version:'2.5.1'
+    compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version:'2.8.3'
+    compile group: 'javax.websocket', name: 'javax.websocket-api', version:'1.0'
+    compile group: 'org.eclipse.jetty.websocket', name: 'javax-websocket-server-impl', version:'9.4.2.v20170220'
+    compile group: 'io.swagger', name: 'swagger-jaxrs', version:'1.5.12'
+    compile group: 'io.dropwizard.metrics', name: 'metrics-core', version:'3.2.2'
+    compile group: 'io.dropwizard.metrics', name: 'metrics-graphite', version:'3.1.2'
+}
+
+jar {
+    // Keep jar clean:
+
+    manifest {
+        attributes ('Main-Class': 'com.omisoft.keepassa.MainApp',
+                'Class-Path': 'cryptolibs/bcprov-jdk15on-1.56.jar',
+        )
+    }
+    // How-to add class path:
+    //     http://stackoverflow.com/questions/22659463/add-classpath-in-manifest-using-gradle
+    //     https://gist.github.com/simon04/6865179
+}
+
+shadowJar {
+    mergeServiceFiles()
+    dependencies {
+        exclude(dependency('org.bouncycastle::'))
+    }
+    task copyJarToLib {
+        doLast {
+            def cryptodir  = new File("$buildDir/jars/cryptolibs")
+            cryptodir.mkdirs()
+            copy {
+                from 'cryptolibs'
+                into "$buildDir/jars/cryptolibs/"
+            }
+        }
+    }
+    //Signing
+    // def jarsignerskip = false
+    def keystoreFile = new File('keystore/jarsignkeystore')
+    def keystorepass = 'asdqwe123@'
+    def keypass = 'asdqwe123!@#'
+    def keyalias = 'jar'
+
+    task signJar(dependsOn: ['shadowJar','copyJarToLib'],description: 'to Sign JAR.',group: 'Build'){
+
+        doLast{
+            println ":$project.name:${name}"
+            def signdir  = new File("$buildDir/jars")
+            signdir.mkdirs()
+            ant.signjar(
+                    destDir: "${signdir.absolutePath}",
+                    jar: 'build/libs/*.jar',
+                    alias:keyalias,
+                    storetype:"jks",
+                    keystore:"${keystoreFile.absolutePath}",
+                    storepass:keystorepass,
+                    keypass:keypass,
+                    verbose:true,
+                    preservelastmodified:"true"
+            )
+        }
+
+    }
+}

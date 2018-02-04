@@ -1,0 +1,9 @@
+copy bcprov-ext-jdk15on-157.jar
+/usr/lib/jvm/java-8-oracle/jre/lib/ext
+
+/usr/lib/jvm/java-8-oracle/jre/lib/security/java.security
+add new line 
+security.provider.N=org.bouncycastle.jce.provider.BouncyCastleProvider
+#security.provider.9=org.bouncycastle.jce.provider.BouncyCastleProvider
+
+

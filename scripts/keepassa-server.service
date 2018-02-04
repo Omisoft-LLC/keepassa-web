@@ -1,0 +1,9 @@
+#SystemD Service for keepassa server. Don't use urandom if we have haveged installed on linux
+[Unit]
+Description=Keepassa Server
+[Service]
+ExecStart=/usr/bin/java  -Djava.security.egd=file:/dev/./urandom -jar /opt/keepassa/KeepassaServer.jar
+Type=simple
+User=developer
+[Install]
+WantedBy=multi-user.target

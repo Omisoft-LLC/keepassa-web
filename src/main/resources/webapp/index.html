@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta property="og:url" content="https://keepassa.eu"/>
+  <meta property="og:title" content="Store and share passwords securely"/>
+  <meta property="og:description" content="Keepassa lets you store and share passwords securely"/>
+  <meta property="og:image" content="https://keepassa.eu/images/keepassa_log_fb.png"/>
+  <meta name="keywords" content="Keepassa, Password management, online, secure storage, free, AES, SERPENT, TWOFISH, Online Password Manager, Web Password Manager">
+  <meta name="description" content="Keepassa is a web password manager, that helps you store your passwords securely and share them with your friends and colleagues">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no, address=no, email=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Keepassa">
+  <meta name="version" content="release-54 build 1673 on v38 tag 3f28c3b3">
+  <title>Keepassa Welcome!</title>
+  <!--build-css-start-->
+  <link rel="stylesheet" href="./css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/login.css">
+  <!--build-css-end-->
+
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>
+      window.addEventListener("load", function(){
+          window.cookieconsent.initialise({
+              "palette": {
+                  "popup": {
+                      "background": "#1d8a8a"
+                  },
+                  "button": {
+                      "background": "#62ffaa"
+                  }
+              },
+              "content": {
+                  "href": "http://omisoft.eu/privacypolicy.html"
+              }
+          })});
+  </script>
+</head>
+<body>
+<header class="header">
+  <div>
+    <p class="header-brand"><a href="/"><img src="images/keppassa_logo_128.png" alt="Keepassa"><span class="betaLabel">beta</span></a></p>
+  </div>
+</header>
+<div id="auth" class="loginPage">
+  <div class="container">
+    <div class="row page-wrapper">
+      <div class="col-md-6">
+        <div class="login-wrapper">
+          <div class="page-header">
+            <h3>Welcome</h3>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h4 class="home-section">Already have an account?</h4>
+              <a href="login.html#/" class="btn btn-sign-in-up">Login</a>
+            </div>
+            <div class="col-md-6">
+              <h4 class="home-section">Not a member yet?</h4>
+              <a href="login.html#/registration" class="btn btn-sign-in-up">Register</a>
+            </div>
+            <div class="col-md-6">
+              <h4 class="home-section">Create a team account?</h4>
+              <a href="login.html#/companyregistration" class="btn btn-sign-in-up">Register</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="info-wrapper">
+          <h2>Keepassa</h2>
+          <p> Lets you manage your passwords, securely. Passwords are triple encrypted and not even we can decrypt them
+            without your user password, which is not kept on storage.
+            We believe so much in our security, that we are offering a reward, for anyone, who could crack passwords in
+            our database.
+            For a full description of our security architecture, click <a href="http://omisoft.eu/products/keepassa/">here.</a>
+            Get our mobile apps and extensions
+            <a href="https://play.google.com/store/apps/details?id=com.omisoft.keepassa">
+              <img width="100px" height="40px" src="images/google-play-badge.png"></a>
+            |
+            <a href="https://chrome.google.com/webstore/detail/keepassa-password-manager/majjlmlppjndmdlkhcokmgodafjgmjch">Chrome
+              Extension</a> | Firefox Extension | Opera Extension</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="./scripts/es5-shim.min.js"></script>
+<script src="./scripts/es6-shim.min.js"></script>
+<script src="./scripts/webcrypto-shim.js"></script>
+<script src="./scripts/jquery-3.1.1.min.js"></script>
+<script src="./scripts/stringview.js"></script>
+<script src="./scripts/sha512.js"></script>
+
+
+<script src="/webjars/keepassa-frontend/1.0.1/login.build.js"></script>
+
+
+<!-- error handling -->
+<script src="./scripts/error-handler.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Example LOGBACK Configuration File
+  http://logback.qos.ch/manual/configuration.html
+  -->
+
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="TIME_BASED_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/opt/keepassa/logs/keepassa.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>/opt/keepassa/logs/keepassa.log.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- Keep logs for 60 days -->
+            <maxHistory>60</maxHistory>
+
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <logger name="io.swagger" level="info" additivity="false"/>
+    <logger name="com.omisoft" level="INFO" additivity="true"/>
+    <!--<logger name="org.hibernate" level="DEBUG" />-->
+    <logger name="org.hibernate.SQL" level="DEBUG" />
+    <!--<logger name="javax.net.ssl" level="DEBUG" />-->
+    <!--<logger name=" sun.security.ssl" level="DEBUG" />-->
+    <!--<logger name=" io.swagger" level="DEBUG" />-->
+    <!--<logger name="org.eclipse.jetty" level="DEBUG"/>-->
+
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="TIME_BASED_FILE"/>
+    </root>
+</configuration>

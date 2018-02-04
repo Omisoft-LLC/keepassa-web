@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Implementation-Title: KeepassaRest
+Implementation-Build: b1f2f

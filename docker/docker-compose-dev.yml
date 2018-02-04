@@ -1,0 +1,22 @@
+version: '2'
+services:
+  dbb:
+    image: postgres:9.5.3
+    container_name: keepassa_db
+    environment:
+    - POSTGRES_DB=keepassa_dev
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=grishatakodikatjivotno
+    ports:
+      - "5432:5432"
+    volumes:
+      - /opt/Keepassa/db/:/var/lib/postgresql/data
+    
+
+  redis:
+    image: redis:alpine
+    container_name: keepassa_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - /opt/Keepassa/logs:/data

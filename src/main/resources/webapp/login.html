@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/Service">
+<head>
+    <meta charset="utf-8">
+    <meta property="og:url"   content="https://keepassa.co" />
+    <meta property="og:title"              content="Store and share passwords securely" />
+    <meta property="og:description"        content="Keepassa lets you store and share passwords securely" />
+    <meta property="og:image"              content="https://keepassa.eu/images/keepassa_log_fb.png" />
+    <meta name="keywords" content="Keepassa, Password management, online, secure storage, free, AES, SERPENT, TWOFISH, Online Password Manager, Web Password Manager">
+    <meta name="description" content="Keepassa is a web password manager, that helps you store your passwords securely and share them with your friends and colleagues">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Keepassa">
+    <meta name="version" content="release-54 build 1673 on v38 tag 3f28c3b3">
+    <title>Keepassa</title>
+    <!--build-css-start-->
+
+
+
+    <link rel="stylesheet" href="./css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="./css/main.css">-->
+    <link rel="stylesheet" href="./css/login.css">
+    <!--build-css-end-->
+
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+<header class="header">
+    <div>
+        <p class="header-brand"><a href="/"><img src="images/keppassa_logo_128.png" alt="Keepassa"><span class="betaLabel">beta</span></a></p>
+    </div>
+</header>
+<div id="auth" class="loginPage">
+    <!--<notification></notification>-->
+    <router-view></router-view>
+</div>
+<script src="./scripts/es5-shim.min.js"></script>
+<script src="./scripts/es6-shim.min.js"></script>
+<script src="./scripts/jquery-3.1.1.min.js"></script>
+<script src="./scripts/stringview.js"></script>
+<script src="./scripts/webcrypto-shim.js"></script>
+<script src="./scripts/sha512.js"></script>
+
+
+<script src="/webjars/keepassa-frontend/1.0.1/login.build.js"></script>
+
+<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer></script>
+
+
+<!-- error handling -->
+<script src="./scripts/error-handler.js"></script>
+
+
+</body>
+</html>
+
